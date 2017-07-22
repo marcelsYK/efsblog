@@ -1,4 +1,6 @@
 from django.conf.urls import url
+from rest_framework.urlpatterns import format_suffix_patterns
+
 from . import views
 
 urlpatterns = [
@@ -16,5 +18,7 @@ urlpatterns = [
     url(r'^investment/(?P<pk>\d+)/delete/$', views.investment_delete, name='investment_delete'),
     url(r'^investment/(?P<pk>\d+)/edit/$', views.investment_edit, name='investment_edit'),
     url(r'^investment/create/$', views.investment_new, name='investment_new'),
-
+    url(r'^customers_json/', views.CustomerList.as_view()),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
