@@ -27,6 +27,7 @@ DEBUG = True
 
 # Python deploys
 ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = []
 
 # Application definition
 
